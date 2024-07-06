@@ -1,0 +1,35 @@
+version: '3'
+
+volumes:
+  local_postgres_data: {}
+  local_postgres_data_backups: {}
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: compose/local/backend/Dockerfile
+    image: django_rest_uzum_backend
+    container_name: backend
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app:cached
+    env_file: .env
+    ports:
+      - "8000:8000"
+    command: /start
+
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/local/postgres/Dockerfile
+    image: django_rest_uzum_postgres
+    container_name: postgres
+    volumes:
+      - local_postgres_data:/var/lib/postgresql/data:cached
+      - local_postgres_data_backups:/backups:cached
+    env_file: .env
+    expose:
+      - "5432"
+    command: ["postgres", "-c", "log_min_duration_statement=0", "-c", "log_statement=all"]

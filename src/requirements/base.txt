@@ -1,0 +1,28 @@
+
+# Python
+boto3==1.34.7 # https://pypi.org/project/boto3/
+Pillow==10.1.0 # https://pypi.org/project/Pillow/
+python-decouple==3.8 # https://pypi.org/project/python-decouple/
+qrcode==7.4.2 # https://pypi.org/project/qrcode/
+requests==2.32.3 # https://pypi.org/project/requests/
+whitenoise==6.6.0 # https://pypi.org/project/whitenoise/
+
+
+# Django
+Django==4.0 # https://pypi.org/project/Django/
+django-colorfield==0.11.0 # https://pypi.org/project/django-colorfield/
+django-cors-headers==4.3.1 # https://pypi.org/project/django-cors-headers/
+django-filter==23.5 # https://pypi.org/project/django-filter/
+django-redis==5.4.0 # https://pypi.org/project/django-redis/
+django-storages==1.14.2 # https://pypi.org/project/django-storages/
+
+
+# Rest Framework
+djangorestframework==3.14.0 # https://pypi.org/project/djangorestframework/
+djangorestframework-simplejwt==5.3.1 # https://pypi.org/project/djangorestframework-simplejwt/
+drf-spectacular==0.27.0 # https://pypi.org/project/drf-spectacular/
+drf-spectacular-sidecar==2023.12.1 # https://pypi.org/project/drf-spectacular-sidecar/
+
+
+# Postgres
+psycopg2-binary==2.9.5 # https://pypi.org/project/psycopg2-binary/
